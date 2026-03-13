@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&family=Zeyada&display=swap');
+@font-face {
+    font-family: "Bradley Hand";
+    src: url("../assets//fonts/Bradley Hand ITC TT Bold.woff");
+}
+html {
+    --color-red: #AA3C41;
+    --color-red: #A93741;
+    --color-brown: #eddbc8;
+    --font-family-headings: "hobo-std", "Cherry Bomb One", sans-serif;
+    --font-family-body: "Bradley Hand", "Caveat", cursive;
+    background-color: black;
+    font-size: 12pt;
+}
+body {
+    font-family: var(--font-family-body);
+    min-width: 375px;
+    margin: 0 auto;
+    padding-bottom: 1rem;
+    background-color: var(--color-brown);
+}
+.app-bar {
+    background-color: var(--color-red);
+    position: fixed;
+    z-index: 10;
+    width: 100%;
+    display: grid;
+    align-items: center;
+}
+.app-bar__logo {
+    display: grid;
+    grid-template: 1fr / 1fr;
+    align-items: center;
+    justify-items: center;
+    /* In case the Alt tag is displayed instead of the logo image */
+    font-size: 5rem;
+    color: var(--color-brown);
+}
+.app-bar__logo > img {
+    width: 300px;
+    max-width: 50%;
+    margin: 32px 0;
+}
+.app-bar__banner {
+    text-align: center;
+    color: var(--color-red);
+    padding-bottom: .5rem;
+    position: absolute;
+    right: 2rem;
+    top: 1rem;
+}
+.app-bar__banner li {
+    text-align: center;
+}
+.fa-bars {
+    font-size: 3rem;
+}
+nav {
+    width: 10rem;
+    height: 3rem;
+    position: absolute;
+    left: 1rem;
+    top: 1rem;
+    overflow: hidden;
+    color: var(--color-brown);
+}
+nav a {
+    text-decoration: none;
+    color: var(--color-brown);
+}
+nav:hover,
+nav:focus,
+nav:active {
+    height: 8rem;
+}
+nav ol {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+nav li {
+    font-size: 1.2rem;
+    margin: 0 1rem;
+    opacity: 87%;
+    padding-left: .5rem;
+}
+nav li:hover {
+    opacity: 100%;
+}
+.current {
+   border-left: thin solid var(--color-brown);
+}
+
+h1 {
+    font-size: 1rem;
+    font-family: var(--font-family-headings);
+    margin: 0;
+}
+h2,
+nav {
+    font-family: var(--font-family-headings);
+    margin: 0;
+    padding: 0;
+    font-size: 2.2rem;
+}
+h2 {
+    padding-left: 1rem;
+}
+h3 {
+    font-size: 1.8rem;
+}
+main {
+    padding-top: 220px;
+    padding-bottom: 3rem;
+}
+.about {
+    font-size: 2rem;
+}
+.about p {
+    padding: .5rem 1rem ;
+}
+.food-menu header {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+}
+.menu-list {
+    border: thick solid var(--color-red);
+    border-radius: 2rem;
+    margin: 1rem;
+    padding: 1rem 2rem
+}
+.pricing {
+    display: flex;
+    flex-direction: row-reverse;
+}
+.pricing--label {
+    padding-right: 1rem;
+    line-height: 1rem;
+    font-family: var(--font-family-headings);
+}
+
+.price {
+    width: 8rem;
+    text-align: center;
+    font-size: 1.6rem;
+}
+.menu-item {
+    display: grid;
+    grid-template-columns: 65% 35%;
+    position: relative;
+    align-items: center;
+}
+.menu-item__ingredients {
+    padding: 0 1rem 0 0;
+}
+.menu-item__ingredients li {
+    display: inline;
+    font-size: 1.8rem;
+}
+.menu-item__image {
+    padding-left: 1rem;
+}
+.menu-item__image img {
+    width: 100%;
+}
+
+.add-on-menu .options {
+    list-style-type: none;
+    padding-left: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    text-align: center;
+    font-size: 1.4rem;
+}
+.add-on-menu img {
+    height: 80px;
+}
+
+.social-media {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    list-style: none;
+    padding-left: 0;
+    justify-items: center;
+    margin: 0;
+}
+.social-media a {
+    display: inline-block;
+    color: var(--color-red);
+}
+.social-media a:hover {
+    color: white
+}
+.kiosk {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    margin: 1rem;
+}
+.kiosk img {
+    width: 50%;
+}
+footer {
+    background-color: var(--color-red);
+    position: fixed;
+    z-index: 10;
+    width: 100%;
+    bottom: 0;
+}
+.footer__banner {
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    color: var(--color-brown);
+    font-size: 1.6rem;
+    font-family: var(--font-family-headings);
+    margin: 0 0 .5rem 0;
+}
+.footer__banner li {
+    text-align: center;
+}
+
+@media screen and (min-width: 640px) {
+    html {
+        font-size: 14pt;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    html {
+        font-size: 16pt;
+    }
+    .app-bar,
+    body,
+    footer {
+        width: 1024px;
+        margin: 0 auto;
+    }
+}
